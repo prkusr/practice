@@ -1,3 +1,7 @@
+package me.practice.problems;
+
+import me.practice.mothership.CodeTemplateOld;
+
 import java.util.HashMap;
 import java.util.Map;
 

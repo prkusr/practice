@@ -1,3 +1,5 @@
+package me.practice.mothership;
+
 import java.util.List;
 
 public abstract class Code implements CodeInterface {

@@ -1,3 +1,5 @@
+package me.practice.mothership;
+
 public abstract class CodeTemplateOld<I,O> {
 
     public void invokeSolver(){
