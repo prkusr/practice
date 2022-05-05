@@ -23,6 +23,11 @@ public class LongestPalindromeSubstring extends Code {
     public List<Input> getInputs() {
         List<Input> inputs = new ArrayList<>();
         inputs.add(new I("badad"));
+        inputs.add(new I("a"));
+        inputs.add(new I("aaaaaaaaaaaa"));
+        inputs.add(new I("adada"));
+        inputs.add(new I("zz"));
+        inputs.add(new I("zy"));
         inputs.add(new I("sejhfgxabaxq"));
         return inputs;
     }
@@ -44,6 +49,8 @@ public class LongestPalindromeSubstring extends Code {
         int n = s.length();
         boolean[][] dp = new boolean[n][n];
 
+        if(n == 1)
+            return s;
         // Following loop will only fill upper half of the dp matrix
         for (int k = 0; k < n; k++) {
             i = 0;
@@ -66,13 +73,14 @@ public class LongestPalindromeSubstring extends Code {
                 // now that we have the dp generated, let's calc the subString indices
                 if (dp[i][j] && max < j - i) {
                     start = i;
-                    end = j + 1;
+                    end = j ;
                     max = j - i;
                 }
                 i++;
                 j++;
             }
         }
-        return s.substring(start, end);
+        // end needs to be incremented for base case for example zy should return z
+        return s.substring(start, end+1);
     }
 }
