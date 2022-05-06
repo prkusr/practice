@@ -11,10 +11,11 @@ public class Driver {
     public static void main(String[] args) {
 //      CodeTemplate<TwoSum.Input, TwoSum.Output> solver =
         Code solver;
+        boolean timeAnalysis = true;
 //      solver = new TwoSumV2();
 //      solver = new LongestSubWithoutRepeatChars();
 //      solver = new LongestPalindromeSubstring();
         solver = new ContainerWithMostWater();
-        solver.invoke();
+        solver.invoke(timeAnalysis);
     }
 }
