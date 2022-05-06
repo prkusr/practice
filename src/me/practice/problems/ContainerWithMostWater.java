@@ -44,7 +44,7 @@ public class ContainerWithMostWater extends Code {
     @Override
     public Output solve(Input input) {
         I in = (I) input;
-        int maxArea = maxArea(in.height);
+        int maxArea = maxAreaOptimal(in.height);
         return new O(in.height, maxArea);
     }
 
@@ -72,7 +72,7 @@ public class ContainerWithMostWater extends Code {
     public int maxAreaOptimal(int[] heights) {
         int maxArea = 0;
 
-        if (heights.length >= 100000 || heights.length < 2) {
+        if (heights.length > 100000 || heights.length < 2) {
             return 0;
         }
 
@@ -91,7 +91,8 @@ public class ContainerWithMostWater extends Code {
 
     // This code won't even compile for this large input
     private int[] getSuperLongArr() {
-        String fileName = "heightArray.csv";
+//      String fileName = "heightArray.csv"; // Answer 705634720
+        String fileName = "heightArrayFail1.csv"; // Answer 995042464
         try {
             return FileReader.readNumbersFromFile(fileName, Integer.class)
                     .stream()
