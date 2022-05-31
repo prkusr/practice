@@ -43,24 +43,19 @@ public class TwoSumV2 extends Code {
         System.out.println("Solution is : " + output.output[0] + " " + output.output[1]);
     }
 
+    @Override
+    public Output solveWithTimeAnalysis(Input input) {
+        return solve(input);
+    }
+
     @AllArgsConstructor
     static class CodeInput implements Input {
         Integer[] nums;
         int target;
-
-//        CodeInput(Integer[] nums, int target) {
-//            this.nums = nums;
-//            this.target = target;
-//        }
-
     }
 
     @AllArgsConstructor
     static class CodeOutput implements Output {
         Integer[] output;
-
-//        CodeOutput(Integer[] output) {
-//            this.output = output;
-//        }
     }
 }
