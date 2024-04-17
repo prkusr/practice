@@ -91,8 +91,8 @@ public class ContainerWithMostWater extends Code {
 
     // This code won't even compile for this large input
     private int[] getSuperLongArr() {
-//      String fileName = "heightArray.csv"; // Answer 705634720
-        String fileName = "heightArrayFail1.csv"; // Answer 995042464
+        String fileName = "heightArray.csv"; // Answer 705634720
+//        String fileName = "heightArrayFail1.csv"; // Answer 995042464
         try {
             return FileReader.readNumbersFromFile(fileName, Integer.class)
                     .stream()
